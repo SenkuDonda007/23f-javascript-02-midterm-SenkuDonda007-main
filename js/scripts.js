@@ -1,12 +1,18 @@
 // Question 1 - The html is not attached to the script file, add the script info in header of html - 1 mark
 
-<script src="scripts.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test 1 | COMP1073 Client-Side JavaScript</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
 
 
 // Question 2 - Declare and initialize a variable called, "myTest1" – you can set it to either a string, a number, or a boolean value. - 2 marks
 
-var myTest1 = "Hello, Professor";
-
+var myTest1 = "Hello";
 
 // Question 3 - Create a variable to hold your student number and store it in studentNum
 
@@ -46,8 +52,7 @@ var question5b = 'I am writing Test1';
 // Write a piece of code that changes the value of question5a to a string, then concatenates it to the value of question5b. 
 // Assign the resulting string to a new variable called question5c. - 3 marks
 
-var question5a = 1;
-var question5b = 'I am writing Test1';
+
 var question5c = question5a.toString() + question5b;
 
 
@@ -143,10 +148,10 @@ question13Btn.addEventListener('click', question13Fun);
 // Tip: You might have to pass some parameter to the function.
 
 // Question 14 - Considering the below multidimensional array, console log on how would you refer to or obtain the number 3? - 1 mark
-let question14 = ["flower", 25, [2, 3, 6], true];
 
-var number3 = question14[2][1]; 
-console.log(number3); 
+var question14 = ["flower", 25, [2, 3, 6], true];
+var number3 = question14[2][1]; // This will give you the value 3.
+
 
 // Question 15 - Observe the below code:
 const question15BtnA = document.querySelector('#question15a');
@@ -177,21 +182,22 @@ var employeeArray = ["200465123: Francoise Rautenstrauch", "200465124: Kendra Lo
                                 capturing each values in a variable, creating dynamic tr and td tags and appending to the tfoot    - 4 marks
 */
 
-var tbody = document.querySelector('tbody');
+var tfoot = document.querySelector("table tfoot");
 
 for (var i = 0; i < employeeArray.length; i++) {
-    var employeeInfo = employeeArray[i].split(': ');
-    var tr = document.createElement('tr');
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    td1.textContent = employeeInfo[1];
-    td2.textContent = employeeInfo[0];
+    var employeeData = employeeArray[i].split(": ");
+    var tr = document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    td1.textContent = employeeData[1];
+    td2.textContent = employeeData[0];
     tr.appendChild(td1);
     tr.appendChild(td2);
-    tbody.appendChild(tr);
+    tfoot.appendChild(tr);
 }
+
 
 // Question 17 - Create an external css file, store in folder and connect with html - 3 marks
 // It's fine if the file has just one style in it...
 
-<link rel="stylesheet" type="text/css" href="your-styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
