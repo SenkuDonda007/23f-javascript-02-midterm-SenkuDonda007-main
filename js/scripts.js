@@ -158,3 +158,6 @@ for (let i = 0; i < employeeArray.length; i++) {
 // Question 17
 // Create an external css file, store in folder and connect with html
 <link rel="stylesheet" href="style.css">
+
+// Het
+</link>
